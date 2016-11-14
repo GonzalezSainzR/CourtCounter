@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView score;
     private TextView goal;
 
-    private EditText red;
-    private EditText blue;
+    private EditText Red;
+    private EditText Blue;
 
     private String redName;
     private String blueName;
@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
         goal = (TextView)findViewById(R.id.goals);
         goal.setText(String.valueOf(g));
 
-        red = (EditText)findViewById(R.id.teamRed);
+        Red = (EditText)findViewById(R.id.teamRed);
 
-        blue = (EditText)findViewById(R.id.teamBlue);
+        Blue = (EditText)findViewById(R.id.teamBlue);
 
         gameOver = new AlertDialog.Builder(MainActivity.this).create();
 
@@ -94,12 +94,12 @@ public class MainActivity extends AppCompatActivity {
     public void alert() {
         //Lines 54-64 are if statements that state who won the game and show the message in the alert box.
         if(s > g) {
-            redName = red.getText().toString();
+            redName = Red.getText().toString();
             gameOver.setMessage(redName + " has won the game!");
         }
 
         if(s < g) {
-            blueName = blue.getText().toString();
+            blueName = Blue.getText().toString();
             gameOver.setMessage(blueName + " has won the game!");
         }
 
